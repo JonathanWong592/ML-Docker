@@ -1,15 +1,13 @@
-# ML-React-App
-It's a template on which we can build a React app and call endpoints to make predictions.
-https://github.com/kb22/ML-React-App-Template
+# Description
+I utilized a ML React/Flask template as shown below with the respective links. I built on top of this and created a linear regression ML model to predict a restaurant's ratings based off of three values: review count, average review length, and average review age. I created the Yelp regression model based off of yelp data provided by Codecademy including business, photo, review, and user data. The model has a score of 83% based off of the features I tested with, more can be viewed in service/model_generator.py. I also dockerized the application into two images, one for the react frontend, and the other for the flask backend. Ways to run the application and the roadmap I took to create the application are below. MIT License from the original template is provided below.
 
-### Usage
-The complete guide to use this repository: https://towardsdatascience.com/create-a-complete-machine-learning-web-application-using-react-and-flask-859340bddb33
+# Links
+Template: https://github.com/kb22/ML-React-App-Template
+Yelp Model & Data: https://www.codecademy.com/learn/machine-learning/modules/yelp-regression-project
+Guide: https://towardsdatascience.com/create-a-complete-machine-learning-web-application-using-react-and-flask-859340bddb33
 
-Frontend: React
-Backend: Flask & Flask-RESTPlus
 
-To run:
-
+# To run (V1 - Non Docker):
 cd ui
 npm install -g serve
 npm run build
@@ -21,14 +19,17 @@ source bin/activate
 pip install -r requirements.txt
 FLASK_APP=app.py flask run
 
+# To run (V2 - Docker):
+docker-compose up
 
-Roadmap (Simplified):
+
+# Roadmap (Simplified):
 User enters site
 User puts in values
 User gets prediction
 
 
-Roadmap (Developer):
+# Roadmap (Developer):
 Initial Setup
     Create a functional model and save it to joblib, this will be accessed by the flask application
     Change the frontend and backend code to align with your model
@@ -46,7 +47,7 @@ User gets prediction back with classifier's best guess
 
 
 
-MIT License
+# MIT License
 
 Copyright (c) 2019 Karan Bhanot
 
