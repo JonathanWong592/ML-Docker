@@ -45,7 +45,22 @@ Guide: https://towardsdatascience.com/create-a-complete-machine-learning-web-app
 - User gets prediction back with classifier's best guess 
     - The prediction is displayed after user clicks 'Predict' button by updating the page
 
+# Extra Model Information
+- Visualization of how user input can be inputted into the model and output a value
+- X_train: [6.4 3.1 5.5 1.8] & y_train: 2
+- We train the classifier based on these values, the values above represent 
+- [Sepal length, Sepal Width, Petal Length, Petal Width] & Actual plant name
+- So in the user interface which is shown through react, we get the change to input our
+- own values and have our classifier model predict what type of iris plant it is depending on our values
 
+- Example, if we put in the exact same values as listed in the first X_train and y_train
+- X_train: [6.4 3.1 5.5 1.8] & y_train: 2, we should expect to see a result of 2 which indicates that
+- our classifier has predicted that the given values is a "Iris Virginica"
+- We know that these types identify to their respective plant names because of documentation online or
+- print(list(dataset.target_names)) => # ['setosa', 'versicolor', 'virginica'] === [0, 1, 2]
+
+- print(prediction) # => [2 1 0 2 0 2 0 1 1 1 2 1 1 1 1 0 1 1 0 0 2 1 0 0 2 0 0 1 1 0]
+- types = { 0: "Iris Setosa", 1: "Iris Versicolour ", 2: "Iris Virginica"}
 
 # MIT License
 
