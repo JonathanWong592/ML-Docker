@@ -51,9 +51,10 @@ class MainClass(Resource):
 			data = [float(val) for val in formData.values()]
 			print(data)
 			prediction = linReg.predict(np.array(data).reshape(1,-1))[0]
+			if(prediction < 0):
+				prediction = 0
 			# Edit decimals
 			num = "{:.2f}".format(prediction)
-
 			response = jsonify({
 				"statusCode": 200,
 				"status": "Yelp Prediction made",
@@ -69,5 +70,7 @@ class MainClass(Resource):
 			})
 
 
+# if __name__=="__main__":
+# 	flask_app.run(host='127.0.0.1', port=5000, debug=True)
 if __name__=="__main__":
-	flask_app.run(host='127.0.0.1', port=5000, debug=True)
+	flask_app.run(host='0.0.0.0', port=5000, debug=True)

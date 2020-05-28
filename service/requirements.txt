@@ -3,6 +3,7 @@ Flask-Cors
 Flask-Restplus
 numpy
 scikit-learn
-sklearn
+sklearn==0.0
 matplotlib
 pandas
+Werkzeug==0.16.1
