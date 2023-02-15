@@ -6,4 +6,4 @@ scikit-learn
 sklearn==0.0
 matplotlib
 pandas
-Werkzeug==0.16.1
+Werkzeug==2.2.3
